@@ -9,9 +9,10 @@ gem 'jquery-rails'
 
 group :development, :test do
    gem 'guard'
+   gem 'guard-bundler'
    gem 'guard-livereload'
-   gem 'guard-rspec'
    gem 'rspec-rails'
+   gem 'guard-rspec'
    gem 'capybara'
    gem 'factory_girl_rails'
    gem 'database_cleaner'
