@@ -26,6 +26,8 @@ RSpec.configure do |config|
    config.after(:each) do
       DatabaseCleaner.clean
    end
+   config.include Rails.application.routes.url_helpers
+   config.include Capybara::DSL
 end
 
 Shoulda::Matchers.configure do |config|

@@ -11,13 +11,14 @@ group :test do
 end
 
 group :development, :test do
-   gem 'guard'
-   gem 'guard-bundler'
-   gem 'guard-livereload'
-   gem 'rspec-rails'
-   gem 'guard-rspec'
-   gem 'capybara'
-   gem 'factory_girl_rails'
-   gem 'database_cleaner'
-   gem 'shoulda-matchers', '~> 3.1.1'
+  gem 'guard'
+  gem 'guard-bundler'
+  gem 'guard-livereload'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers', '~> 3.1.1'
+  gem 'htmlbeautifier'
 end
