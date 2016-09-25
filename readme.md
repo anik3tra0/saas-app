@@ -7,6 +7,7 @@ Standard SaaS Application
 4. Integration tests for Account Creation
 5. Account Model Specs with Subdomain Validations
 6. Integration tests for User Authentication
+7. Integration tests for Subdomain Bifurcation
 
 ___
 Aim: Learning RSpec and Testing on Rails
