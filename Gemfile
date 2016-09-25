@@ -9,6 +9,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'devise'
 gem 'apartment'
+gem 'cloudflare'
 
 group :test do
 end
@@ -24,4 +25,5 @@ group :development, :test do
    gem 'database_cleaner'
    gem 'shoulda-matchers', '~> 3.1.1'
    gem 'htmlbeautifier'
+   gem 'pry-rails'
 end
