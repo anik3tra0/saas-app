@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>SaasApp</title>
-      <%= stylesheet_link_tag    'application' %>
-      <%= javascript_include_tag 'application' %>
+      <title>Timetracker</title>
+      <%= stylesheet_link_tag    "application" %>
+      <%= javascript_include_tag "application" %>
       <%= csrf_meta_tags %>
    </head>
    <body>
-   	<% flash.each do |name,msg| %>
-   		<%= content_tag :div, msg, :id => "flash_#{name}" %>
-   	<% end %>
 
-      <%= yield %>
+      <header class="container">
+         <nav class="navbar navbar-default">
+            <div class="navbar-header">
+               <%= link_to 'Time Tracker', root_path, class: 'navbar-brand' %>
+            </div>
+            <div class="pull-right right-buttons">
+               <% if user_signed_in? %>
+               Hello,
+               <%= current_user.name %>
+               |
+               <%= link_to 'Sign out', destroy_user_session_path, method: 'delete', class: 'btn btn-default navbar-btn' %>
+               <% end %>
+            </div>
+         </nav>
+      </header>
+
+      <div class="main container">
+         <%= flash_messages if show_layout_flash? %>
+
+         <div class="row">
+            <%= yield %>
+         </div>
+      </div>
 
    </body>
 </html>
