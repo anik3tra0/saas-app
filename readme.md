@@ -6,8 +6,9 @@ Standard SaaS Application
 3. Configured RSpec, Shoulda, Capybara etc...
 4. Integration tests for Account Creation
 5. Account Model Specs with Subdomain Validations
+6. Integration tests for User Authentication
 
 ___
-Learning RSpec and Testing on Rails
+Aim: Learning RSpec and Testing on Rails
 
 Aniket Rao
