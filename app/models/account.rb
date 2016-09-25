@@ -11,7 +11,7 @@ class Account < ActiveRecord::Base
    accepts_nested_attributes_for :owner
 
    before_validation :downcase_subdomain
-   after_save :create_cloudflare_subdomain
+   after_save :create_cloudflare_subdomain if Rails.env.production?
 
    private
 
