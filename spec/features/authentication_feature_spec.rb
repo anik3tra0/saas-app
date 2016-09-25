@@ -36,10 +36,3 @@ RSpec.describe 'user authentication' do
       expect(page).to have_content('Signed out successfully')
    end
 end
-
-def sign_user_in(user, opts = {})
-   visit new_user_session_url(subdomain: opts[:subdomain])
-   fill_in 'Email', with: user.email
-   fill_in 'Password', with: (opts[:password] || user.password)
-   click_button 'Sign in'
-end

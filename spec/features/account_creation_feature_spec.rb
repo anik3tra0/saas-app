@@ -10,6 +10,20 @@ RSpec.describe 'account creation' do
       expect(Account.count).to eq(1)
    end
 
+   it 'allows account followup creation' do
+      subdomain2 = "#{subdomain}2"
+      sign_up(subdomain2)
+      expect(page.current_url).to include(subdomain2)
+      expect(Account.all.count).to eq(2)
+   end
+
+   it 'does not allow accout creation on subdomain' do
+      user = User.first
+      subdomain = Account.first.subdomain
+      sign_user_in(user, subdomain: subdomain)
+      expect { visit new_account_url(subdomain: subdomain) }.to raise_error ActionController::RoutingError
+   end
+
    it 'allows access of subdomain' do
       visit root_url(subdomain: subdomain)
       expect(page.current_url).to include(subdomain)
