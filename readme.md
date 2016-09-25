@@ -12,6 +12,7 @@ Standard SaaS Application
 9. Accounts with Schemas
 10. Accounts with Subdomains
 11. Subdomains routing configurations
+12. Cloudflare for Subdomains
 
 ___
 Aim: Learning RSpec and Testing on Rails
