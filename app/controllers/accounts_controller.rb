@@ -6,8 +6,11 @@ class AccountsController < ApplicationController
 
    def create
       @account = Account.new(account_params)
-      if @account.save
-         redirect_to root_path, notice: 'Signed up successfully'
+      if @account.valid?
+         Apartment::Tenant.create(@account.subdomain)
+         Apartment::Tenant.switch!(@account.subdomain)
+         @account.save
+         redirect_to new_user_session_url(subdomain: @account.subdomain)
       else
          render 'new', alert: 'Something Went Wrong, Please Try Again'
       end
