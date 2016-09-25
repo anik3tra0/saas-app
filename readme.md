@@ -8,6 +8,7 @@ Standard SaaS Application
 5. Account Model Specs with Subdomain Validations
 6. Integration tests for User Authentication
 7. Integration tests for Subdomain Bifurcation
+8. Configured Apartment for Multitenancy
 
 ___
 Aim: Learning RSpec and Testing on Rails
