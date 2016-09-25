@@ -11,6 +11,7 @@ Standard SaaS Application
 8. Configured Apartment for Multitenancy
 9. Accounts with Schemas
 10. Accounts with Subdomains
+11. Subdomains routing configurations
 
 ___
 Aim: Learning RSpec and Testing on Rails
