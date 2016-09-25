@@ -27,7 +27,7 @@ RSpec.configure do |config|
 
    config.after(:each) do
       DatabaseCleaner.clean
-      Apartment::Database.reset
+      Apartment::Tenant.reset
       drop_schemas
    end
    config.include Rails.application.routes.url_helpers

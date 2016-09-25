@@ -8,9 +8,9 @@ class ApplicationController < ActionController::Base
    private
 
    def load_schema
-      Apartment::Database.switch!('public')
+      Apartment::Tenant.switch!('public')
       return unless request.subdomain.present?
 
-      Apartment::Database.switch!(request.subdomain)
+      Apartment::Tenant.switch!(request.subdomain)
    end
 end
