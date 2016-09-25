@@ -5,6 +5,12 @@ FactoryGirl.define do
 
       factory :account_with_schema do
          after(:build) do |account|
-            Apartment::Tenant.create
+            Apartment::Tenant.create(account.subdomain)
+            Apartment::Tenant.switch!(account.subdomain)
+         end
+         after(:create) do |_account|
+            Apartment::Tenant.reset
+         end
+      end
    end
 end
