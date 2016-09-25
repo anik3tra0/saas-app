@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Timetracker</title>
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
-    <header class="container">
-      <nav class="navbar navbar-default">
-        <div class="navbar-header">
-          <%= link_to 'Time Tracker', root_path, class: 'navbar-brand' %>
-        </div>
-        <div class="pull-right right-buttons">
-          <% if user_signed_in? %>
-            Hello,
-     <%= current_user.name %>
-            |
-     <%= link_to 'Sign out', destroy_user_session_path, method: 'delete', class: 'btn btn-default navbar-btn' %>
-          <% else %>
-            <% if request.subdomain.present? %>
-              <%= link_to 'Sign in', new_user_session_path, class: 'btn btn-default navbar-btn' %>
+   <head>
+      <title>SaaS App</title>
+      <%= stylesheet_link_tag    "application" %>
+      <%= javascript_include_tag "application" %>
+      <%= csrf_meta_tags %>
+   </head>
+   <body>
+      <header class="container">
+         <nav class="navbar navbar-default">
+            <div class="navbar-header">
+               <%= link_to 'SaaS App', root_path, class: 'navbar-brand' %>
+            </div>
+            <div class="pull-right right-buttons">
+               <% if user_signed_in? %>
+               Hello,
+               <%= current_user.name %>
+               |
+               <%= link_to 'Sign out', destroy_user_session_path, method: 'delete', class: 'btn btn-default navbar-btn' %>
+            <%# else %>
+               <%# if request.subdomain.present? %>
+               <%#= link_to 'Sign in', new_user_session_path, class: 'btn btn-default navbar-btn' %>
+               <% end %>
+            </div>
             <% end %>
-          </div>
-        <% end %>
-      </nav>
-    </header>
-    <div class="main container">
-      <%= flash_messages if show_layout_flash? %>
-      <div class="row">
-        <%= yield %>
+         </nav>
+      </header>
+      <div class="main container">
+         <%= flash_messages if show_layout_flash? %>
+         <div class="row">
+            <%= yield %>
+         </div>
       </div>
-    </div>
-  </body>
+   </body>
 </html>
