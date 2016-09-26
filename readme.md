@@ -1,7 +1,7 @@
 Standard SaaS Application
 ======
 
-# Whats done
+### Whats done
 1. Generated New Rails App
 2. Setup Gemfile for Test Suite
 3. Configured RSpec, Shoulda, Capybara etc...
@@ -15,9 +15,9 @@ Standard SaaS Application
 11. Subdomains routing configurations
 12. Cloudflare for Subdomains
 
-# What needs to be done
+### What needs to be done
 
-# Configurations
+### Configurations
 
 1. For Production, you need to grant your postgres user privileges to create schemas on the fly
 
