@@ -16,7 +16,7 @@ class Account < ActiveRecord::Base
    private
 
    def downcase_subdomain
-      self.subdomain = subdomain.try(:downcase).parameterize
+      self.subdomain = subdomain.try(:downcase)
    end
 
    def create_cloudflare_subdomain
