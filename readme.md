@@ -27,6 +27,7 @@ postgres=# GRANT CREATE ON DATABASE db_name TO db_user;
 2. For live subdomain usage, add Cloudflare API keys and details to secrets.yml
 3. PostgreSQL is mandatory
 4. For Development, use POW server or lvh.me:3000
+
 ___
 
 Aim: Learning RSpec and Testing on Rails
